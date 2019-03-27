@@ -6,6 +6,7 @@ phases:
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
      # - apt install maven
+     # update the MVN and Java for Ubuntu machine running python
       - apt update
       - apt install -y default-jdk
       - wget https://www-us.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -P /tmp
@@ -24,6 +25,7 @@ phases:
   build:
     commands:
       - echo Build started on `date`
+      - mkdir target
       #- mvn package shade:shade
       - mv target/HelloWorld-1.0.jar .
       - unzip HelloWorld-1.0.jar
