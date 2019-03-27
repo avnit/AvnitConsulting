@@ -7,7 +7,7 @@ phases:
       - pip install --upgrade awscli
      # - apt install maven
       - apt update
-      - apt install default-jdk
+      - apt install -y default-jdk
       - wget https://www-us.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -P /tmp
       - tar xf /tmp/apache-maven-*.tar.gz -C /opt
       - ln -s /opt/apache-maven-3.6.0 /opt/maven
