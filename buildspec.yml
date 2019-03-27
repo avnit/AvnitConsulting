@@ -5,6 +5,10 @@ phases:
     commands:
       # Upgrade AWS CLI to the latest version
       - pip install --upgrade awscli
+      - apt install maven
+      - wget https://www-us.apache.org/dist/maven/maven-3/3.6.0/binaries/apache-maven-3.6.0-bin.tar.gz -P /tmp
+      - tar xf /tmp/apache-maven-*.tar.gz -C /opt
+      - ln -s /opt/apache-maven-3.6.0 /opt/maven
       - apt-get install maven
   pre_build:
     commands:
